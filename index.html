@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration Form</title>
+    <style>
+         body{
+           /* background:linear-gradient(to right, #0aff2b, #35b87b); */
+           display: flex;
+           margin:0;
+         }
+          #outer-box{
+           background:linear-gradient(to right , #1fa767, #0aff2b);
+           display: flex;
+           flex-direction: column;
+           position:relative;
+           text-align: center;
+           height: 400px;
+           width: 400px;
+           margin-top:7rem ;
+           margin-left: 33rem;
+           border-radius: 3px;
+           max-width: 100%;
+          }
+          #name-box{
+           margin-top:5px;
+           margin-bottom: 2px;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           padding-bottom: 2px;
+           font-weight:bold ;
+          }
+          #name{
+           margin-left:50px;
+           margin-right: 50px;
+           padding:10px;
+           border:1px solid rgb(78, 78, 78);
+           border-radius:2px;
+           invalid:focus{border:2px solid rgb(3, 3, 3)};
+         }
+         #email-box{
+           margin-top:5px;
+           margin-bottom: 2px;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           padding-bottom: 2px;
+           font-weight:bold ;
+         }
+         #email{
+           margin-left:50px;
+           margin-right: 50px;
+           padding:10px;
+           border:1px solid rgb(78, 78, 78);
+           border-radius:2px;
+           invalid:focus{border:1px solid rgb(3, 3, 3)};
+         }
+         #password-box{
+           margin-top:5px;
+           margin-bottom: 2px;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           padding-bottom: 2px;
+           font-weight:bold ;
+         }
+         #password{
+           margin-left:50px;
+           margin-right: 50px;
+           padding:10px;
+           border:1px solid rgb(78, 78, 78);
+           border-radius:2px;
+           invalid:focus{border:1px solid rgb(3, 3, 3)};
+         }
+         #dob-box{
+           margin-top:5px;
+           margin-bottom: 2px;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           padding-bottom: 2px;
+           font-weight:bold ;
+         }
+         #dob{
+           margin-left:50px;
+           margin-right: 50px;
+           padding:10px;
+           border:1px solid rgb(78, 78, 78);
+           border-radius:2px;
+           invalid:focus{border:1px solid rgb(3, 3, 3)};
+         }
+         #acceptTerms-box{
+           margin-top:5px;
+           margin-bottom: 2px;
+           justify-content: center;
+           padding-bottom: 2px;
+           invalid:focus{border:1px solid rgb(3, 3, 3)};
+           font-weight:bold ;
+         }
+         #submit-box{
+           margin-left:50px;
+           margin-right: 50px;
+           padding:10px;
+           border-radius:2px;
+         }
+       </style>
+</head>
+<body>
+       <!-- <a href="/home"> Back to home page </a> -->
+
+    <div id="outer-box">
+        <h2 style="font-weight: bolder;">Registration form</h2>
+      <form id="user-form">
+        <div id="name-box">
+        <label for="name" >Name</label>
+        <input required type="text" id="name" name="name" placeholder="Enter your name">
+      </div>
+         <div id="email-box">
+        <label for="email">Email</label>
+        <input required type="email" id="email" name="email" placeholder="Enter your email">
+        </div>
+        <div id="password-box">
+        <label for="password">Password</label>
+        <input required type="password" id="password" name="password" placeholder="Enter your password">
+        </div>
+        <div id="dob-box">
+        <label for="dob">Date of Birth</label>
+        <input required type="date" id="dob" name="dob" placeholder="Enter your Date Of Birth">
+        </div>
+        <div id="acceptTerms-box">
+        <input type="checkbox" id="acceptTerms" name="acceptTerms">
+        <label required for="acceptTerms">Accept Terms & Conditions</label>
+        </div>
+        <div id="submit-box">
+        <button onclick="saveUserForm(event)" type="submit">Submit</button>
+        </div>
+        <h1>Entries</h1>
+        <div id="UserEntries"> </div>
+    </div>
+      
+   <script src="./index.js" ></script>
+</body>
+</html>
